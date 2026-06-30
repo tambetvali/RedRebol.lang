@@ -1,3 +1,15 @@
+Notice:
+- [The Amiga Museum](https://web.archive.org/web/20170524095809/http://theamigamuseum.com/amiga-people/carl-sassenrath/): We can thank Carl Sassenrath for the wonderful multi-tasking system we came to know and enjoy on the Amiga, and don’t forget, while Unix (and many years later, Linux) may have had multi-tasking since their inception, equivalent multi-tasking capabilities didn’t come to Windows until, at the earliest, Windows NT in 1993 (8 years AFTER the Amiga), and didn’t arrive on the Apple Mac series of computers until MacOS X in 2001 (16 years AFTER the Amiga).
+
+I must say Amiga and Atari computers were my childhood favourites, and they allow gaming (especially Amiga) and programming, such as Basic (Atari is superior experience).
+- https://en.wikipedia.org/wiki/Amiga
+- https://en.wikipedia.org/wiki/Atari_8-bit_computers
+
+As you can see Carl Sassenrath, author of Rebol, was also author of Amiga Operating System:
+- This means it *did not exist so far of me, but close enough*.
+
+---
+
 I switch to rather Rebol and Red from Python, in Laegna development.
 
 I explain what they are:
