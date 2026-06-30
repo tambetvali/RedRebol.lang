@@ -17,6 +17,223 @@ To repeat:
 
 ---
 
+I asked CoPilot to explain this background more, making this repo start with nostalgic information about childhood experiences:
+
+> give me this in github article format, md code block - all this information, interesting background and explaration, for github page which then introduces red and rebol. Also show about amiga and atari, why they *felt* good and very throughoutly-implemented to level of pixels and sound samples: later computers with huge resolution and tight sound sampling were *not anymore* designed for such precision and detailwork (back then, many images were drawn pixel-by-pixel, because for 32*32 palette image it's simply achievable and most efficient, while if 256*256 pixels takes the same size on screen - it's like quadratic complexity and strength of modern computer must come from elsewhere.
+
+# Red & REBOL — A Different Lineage of Programming  
+### *Minimalism, Dialects, Human‑Centric Design, and the Spirit of Amiga & Atari*
+
+## Overview
+Red and REBOL are not “just another scripting language.”  
+They come from a **unique lineage** — one that traces directly back to the design philosophy of the **Amiga** and **Atari ST**, two machines that shaped an entire generation of programmers and digital artists.
+
+This document introduces:
+- the **concepts and paradigms** behind Red & REBOL  
+- their **historical roots** in Amiga OS  
+- why these languages feel different  
+- why they resonate with people who grew up with pixel‑precision computers  
+- how minimalism and human‑centric design shaped their vision  
+
+---
+
+## 1. Origins: Carl Sassenrath and the Amiga OS
+Carl Sassenrath, the creator of REBOL, was one of the principal architects of the **Amiga Operating System** — specifically the **Exec kernel**, the heart of Amiga’s multitasking and messaging system.
+
+Amiga OS was:
+- tiny  
+- elegant  
+- message‑driven  
+- cooperative  
+- human‑centric  
+- designed for creativity  
+
+These same principles reappear in REBOL and Red.
+
+### Amiga → REBOL → Red  
+The conceptual lineage looks like this:
+
+- **Amiga OS**  
+  - message ports  
+  - tasks  
+  - signals  
+  - lightweight design  
+  - human‑friendly APIs  
+
+- **REBOL**  
+  - message‑passing semantics  
+  - dialects  
+  - minimal core  
+  - human‑friendly syntax  
+  - everything is a series  
+
+- **Red**  
+  - full‑stack language  
+  - dialects + reactive GUI  
+  - native code generation  
+  - minimal runtime  
+  - human‑centric design  
+
+The same worldview, expressed in a programming language instead of an operating system.
+
+---
+
+## 2. Why Amiga & Atari *felt* different  
+People who grew up with Amiga or Atari often describe them as “magical.”  
+This wasn’t nostalgia — it was **design**.
+
+### Precision & Pixel‑Level Craft
+On Amiga and Atari:
+- images were often drawn **pixel‑by‑pixel**  
+- sprites were crafted by hand  
+- sound samples were edited at the byte level  
+- color palettes were intentionally limited  
+- resolution was small enough to be *masterable*  
+
+A 32×32 icon could be perfected.  
+A 320×200 screen could be fully understood.  
+A 4‑bit or 8‑bit palette could be controlled with artistic precision.
+
+Modern systems have:
+- huge resolutions  
+- massive color spaces  
+- complex pipelines  
+- layers of abstraction  
+
+This makes **precision work harder**, not easier.  
+The complexity grows quadratically with resolution — a 256×256 image is not “eight times harder” than 32×32; it’s **64 times harder** in pixel count.
+
+Amiga and Atari were designed for **direct manipulation**, **clarity**, and **mastery**.
+
+Red and REBOL inherit this spirit.
+
+---
+
+## 3. REBOL: A Language of Meaning, Not Syntax
+REBOL introduced several radical ideas:
+
+### Dialects  
+Mini‑languages inside the language.  
+Human‑readable, domain‑specific, compact.
+
+Example (escaped fenced block):
+
+\`\`\`rebol
+view layout [
+    text "Name:"
+    field
+    button "OK" [alert "Done"]
+]
+\`\`\`
+
+### Semantic Programming  
+Code shaped around meaning, not syntax.  
+Blocks represent **data**, **code**, **messages**, **structures**.
+
+### Minimalism  
+REBOL/Core fits in ~300 KB.  
+REBOL/View fits in ~600 KB.  
+Everything is integrated.
+
+### Messaging Model  
+REBOL was originally designed as a **distributed messaging language**.
+
+---
+
+## 4. Red: A Full‑Stack Language Inspired by REBOL
+Red extends REBOL’s ideas into a modern, compiled environment.
+
+### Red/View  
+A declarative GUI system inspired by REBOL/View.
+
+\`\`\`red
+view [
+    text "Hello"
+    button "OK" [alert "Clicked"]
+]
+\`\`\`
+
+### Red/System  
+A low‑level C‑like language for:
+- native code  
+- bindings  
+- drivers  
+- OpenGL  
+- SDL  
+- embedded systems  
+
+### Full‑Stack Philosophy  
+Red aims to replace:
+- scripting languages  
+- native languages  
+- DSLs  
+- GUI toolkits  
+- build systems  
+
+All with one coherent, minimal, human‑centric environment.
+
+---
+
+## 5. Why Red & REBOL Feel “Old‑School” in the Best Way
+People often compare Red/REBOL to:
+- Turbo Pascal  
+- Borland IDEs  
+- QBasic  
+- Amiga/Atari development tools  
+
+Because they share the same qualities:
+
+### ✔ Small, fast, elegant  
+### ✔ Integrated GUI & graphics  
+### ✔ Human‑friendly syntax  
+### ✔ No dependency hell  
+### ✔ Offline, self‑contained  
+### ✔ Designed for creativity  
+### ✔ Immediate feedback  
+
+They feel like tools built for **humans**, not machines.
+
+---
+
+## 6. Theoretical Materials & Free Resources
+If you want to explore the deeper philosophy behind these languages, here are the best free sources:
+
+### REBOL
+- REBOL Concepts PDF  
+- REBOL/Core User Guide  
+- REBOL/View Book  
+- REBOL Programmer’s Guide  
+- REBOL Dialects Paper  
+- Carl Sassenrath’s essays  
+- REBOL 3 Design Docs  
+
+### Red
+- Red Language Specification  
+- Red/System Specification  
+- Red Design Notes  
+- Red Wiki  
+
+All are free and offline‑friendly.
+
+---
+
+## 7. Conclusion: A Different Kind of Programming
+Red and REBOL are not mainstream languages — they are **philosophical systems** built around:
+
+- minimalism  
+- clarity  
+- expressiveness  
+- human‑centric design  
+- semantic structure  
+- integrated environments  
+- creative empowerment  
+
+They carry the DNA of the Amiga and Atari era — a time when computers were designed for **precision**, **craft**, and **joy**.
+
+If you grew up with those machines, Red and REBOL will feel like coming home.
+
+---
+
 I switch to rather Rebol and Red from Python, in Laegna development.
 
 I explain what they are:
