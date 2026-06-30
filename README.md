@@ -8,6 +8,13 @@ I must say Amiga and Atari computers were my childhood favourites, and they allo
 As you can see Carl Sassenrath, author of Rebol, was also author of Amiga Operating System:
 - This means it *did not exist so far of me, but close enough*.
 
+To repeat:
+- Not PC.
+- Not Apple.
+- Not DIY-Linux-box.
+  - Amiga and Atari were my childhood favourite computers.
+  - Not because of *how fast*, not because of *how functional* - but because of *how feels*.
+
 ---
 
 I switch to rather Rebol and Red from Python, in Laegna development.
