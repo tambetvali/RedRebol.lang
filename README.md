@@ -1,3 +1,26 @@
+I switch to rather Rebol and Red from Python, in Laegna development.
+
+I explain what they are:
+- Extensible languages. I don't want to write number classes which slightly differ from float or int:
+  - I want to write number *low-level type*, for which the class syntax LaeNumber("O") looks like
+    - DecimalPlus(DecimalNumber("2"), DecimalNumber("2")): not a syntax, but semantics.
+      - 2 + 2: 1 layer, binary complexity tree.
+      - DecimalPlus(DecimalNumber("2"), DecimalNumber("2")): number in string in brackets in function in brackets in function and all that twice - this *is* what defines complexity.
+
+Both languages are:
+- Under development, progressing.
+- 5th generation.
+- Exceptional ideas and implementation.
+- Fully packaged like old school languages, while decent.
+
+Laegna + SpiReason is about the same: as they develop, red and rebol develop, and we can safely assume we don't need - fully finished docs, powerful 3D library etc. right now, but rather the case that we can draw, do math, extend semantics, and all those things are just coming...
+- These languages are powerful, and allow to set up the number system with minimal effort.
+- Results can be served to python, or using rebel browser scripts.
+  - Semantic sugar is critical: Sheep Counter is perfect example, how number counter from 1 to few hundred might look like complexity layer of data.
+  - In rebol-red, Laegna numbers look just trivial - adding 1 to count to next number should not feel like magic!
+
+---
+
 # Red & Rebol as New‑Generation Languages  
 ### Dialect‑native computation for Laegna, Spireason, and custom mathematical universes
 
