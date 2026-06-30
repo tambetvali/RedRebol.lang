@@ -325,3 +325,132 @@ Dialect-native languages like Red/Rebol allow:
 - Octave access.
 
 This article shows how all pieces fit together into a coherent, mathematically meaningful system.
+
+```rebol
+;---------------------------
+; REBOL: “0l” as a custom numeric-like type
+;---------------------------
+
+; define a constructor: 0l value is stored as a tagged block [0l <number>]
+make-0l: func [n [integer! decimal!]] [
+    reduce ['0l n]
+]
+
+; extractor: get the numeric payload
+get-0l: func [v [block!]] [
+    second v
+]
+
+; arithmetic “operators” implemented as functions
+add-0l: func [a [block!] b [block!]] [
+    make-0l get-0l a + get-0l b
+]
+
+sub-0l: func [a [block!] b [block!]] [
+    make-0l get-0l a - get-0l b
+]
+
+mul-0l: func [a [block!] b [block!]] [
+    make-0l get-0l a * get-0l b
+]
+
+div-0l: func [a [block!] b [block!]] [
+    make-0l get-0l a / get-0l b
+]
+
+; truthiness: non‑zero is TRUE, zero is FALSE
+truth-0l?: func [v [block!]] [
+    get-0l v <> 0
+]
+
+; iterable: walk a series of plain numbers, wrap each as 0l
+foreach-0l: func [series [block!] body [block!]] [
+    foreach n series [
+        do bind body 'n
+    ]
+]
+
+;---------------------------
+; usage
+;---------------------------
+
+a: make-0l 2
+b: make-0l 3
+
+c: add-0l a b
+print ["2 + 3 as 0l =" get-0l c]
+
+if truth-0l? c [
+    print "c is non-zero in 0l logic"
+]
+
+foreach-0l [0 1 2 3] [
+    x: make-0l n
+    if truth-0l? x [
+        print ["non-zero 0l:" get-0l x]
+    ]
+]
+```
+
+```red
+;---------------------------
+; Red: “0l” as an object-based numeric-like type
+;---------------------------
+
+; define a module-like context for the 0l “type”
+0l!: context [
+
+    ; constructor: make a 0l object
+    make: func [n [integer! float!]] [
+        context [
+            type:  '0l
+            value: n
+        ]
+    ]
+
+    ; arithmetic “operators”
+    add: func [a b] [
+        make a/value + b/value
+    ]
+
+    sub: func [a b] [
+        make a/value - b/value
+    ]
+
+    mul: func [a b] [
+        make a/value * b/value
+    ]
+
+    div: func [a b] [
+        make a/value / b/value
+    ]
+
+    ; truthiness: non‑zero is TRUE
+    truth?: func [x] [
+        x/value <> 0
+    ]
+]
+
+;---------------------------
+; usage
+;---------------------------
+
+a: 0l!/make 2
+b: 0l!/make 3
+
+c: 0l!/add a b
+print ["2 + 3 as 0l =" c/value]
+
+if 0l!/truth? c [
+    print "c is non-zero in 0l logic"
+]
+
+nums: [0 1 2 3]
+
+foreach n nums [
+    x: 0l!/make n
+    if 0l!/truth? x [
+        print ["non-zero 0l:" x/value]
+    ]
+]
+```
