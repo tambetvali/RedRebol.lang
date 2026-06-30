@@ -53,10 +53,10 @@ This is structural truth, not boolean coercion.
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 if 0LAA [ ...true branch... ]
 if 0LOI [ ...false branch... ]
-\`\`\`
+```
 
 ---
 
@@ -70,11 +70,11 @@ Wave numbers have a natural ordering:
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 for a in 0WII to 0WEE [
     ...do something...
 ]
-\`\`\`
+```
 
 ### 3.2 Iterating by digit length R
 
@@ -86,7 +86,7 @@ Digit length is essential in Laegna math.
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 for a in 0r2 [
     ...all 2-digit numbers...
 ]
@@ -94,7 +94,7 @@ for a in 0r2 [
 for a in 0r2 to 0r4 [
     ...2-digit, 3-digit, 4-digit numbers...
 ]
-\`\`\`
+```
 
 This is a structural iteration over the combinatorial universe of digit sequences.
 
@@ -117,11 +117,11 @@ Operations preserve:
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 0LAA + 0LOE
 0wAI * 0WEE
 0LxA2 ^ 0Lb01
-\`\`\`
+```
 
 ---
 
@@ -134,19 +134,19 @@ Example (escaped fence):
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 sign? 0LAA   ; unsigned
 sign? 0lAA   ; signed
-\`\`\`
+```
 
 ### 5.2 Absolute value
 
 Absolute value removes sign but preserves type:
 
-\`\`\`text
+```text
 abs 0lOI  → 0LOI
 abs 0wAE  → 0WAE
-\`\`\`
+```
 
 ### 5.3 Octave
 
@@ -159,10 +159,10 @@ You can access it via:
 
 Example (escaped fence):
 
-\`\`\`text
+```text
 Oct(0LAA)   → octave of R
 0LAA.oct    → same
-\`\`\`
+```
 
 ---
 
@@ -172,36 +172,36 @@ Below is a clean syntax definition for Laegna numbers.
 
 ### 6.1 Prefix grammar
 
-\`\`\`text
+```text
 prefix = "0" type base
 type   = ("L" | "W" | "l" | "w")
 base   = ("" | "b" | "x")
-\`\`\`
+```
 
 ### 6.2 Digit grammar
 
-\`\`\`text
+```text
 digit = ("A" | "E" | "O" | "I")
 digits = digit+
-\`\`\`
+```
 
 ### 6.3 Full number
 
-\`\`\`text
+```text
 laegna-number = prefix digits
-\`\`\`
+```
 
 ### 6.4 Length R
 
-\`\`\`text
+```text
 R = length of digits
-\`\`\`
+```
 
 ### 6.5 Octave
 
-\`\`\`text
+```text
 octave = f(R)
-\`\`\`
+```
 
 ---
 
@@ -269,40 +269,40 @@ Below is a complete scenario showing how Laegna numbers behave.
 
 ### 8.1 Define numbers
 
-\`\`\`text
+```text
 a = 0LAA
 b = 0WIO
 c = 0r3
-\`\`\`
+```
 
 ### 8.2 Conditional truth
 
-\`\`\`text
+```text
 if a [ ...true... ]
 if b [ ...false... ]
-\`\`\`
+```
 
 ### 8.3 Iteration
 
-\`\`\`text
+```text
 for x in 0r2 to 0r4 [
     ...iterate lengths 2, 3, 4...
 ]
-\`\`\`
+```
 
 ### 8.4 Math
 
-\`\`\`text
+```text
 d = a + b
 e = a ^ 0LxA2
 f = abs 0lOI
-\`\`\`
+```
 
 ### 8.5 Octave
 
-\`\`\`text
+```text
 o = a.oct
-\`\`\`
+```
 
 ---
 
