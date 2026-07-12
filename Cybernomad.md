@@ -1,4 +1,4 @@
-# Here are the basic answers from CoPilot:
+# Here are the basic answers
 
 ##### tio.run - basic example runner (online non-auth interpreter)
 
@@ -114,9 +114,10 @@ Tio, which in Laegna reads theorem input-output:
 - We can already implement syntax, and test it.
   - It won't need UI.
 
-We cannot run UI nor serve web. Let's go further with provisions and try the same code.
+##### Enough for now
 
-- 
+I was seeking for more, but they are not complete solutions. I think I make sure my initial files can be run with tio for experimentation.
+- Btw. - github codespaces indeed allows to work on red and rebol, but it's not 24/7 free service.
 
 # Can we use it online?
 
@@ -133,3 +134,12 @@ I asked CoPilot the second day, answered the "how to ask precisely what I want":
 > - Allows to program in Red (essential), maybe Rebol (optional, plus).
 > - Preferrably: able to serve the web page from it's internal server address, and very optionally it's "Console" could become tunnel and allow running some IDE: the latter, rather, is probably that I show the IDE program on web, and only compile it for IDE if downloading as application - I think it's "portability" should enable this as core function of the semantically good dialect.
 
+All we got was tio.run - good thing to remember, but not enough. Let's try another solution.
+
+> Well.
+>
+> Let's go deeper:
+> 
+> Free, online, 24/7 linux host where Red and Rebol would just install perfectly.
+
+Well, I have to work on it myself..
